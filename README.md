@@ -25,3 +25,24 @@ git clone [https://github.com/Saquib-DA/LLM-code.git](https://github.com/Saquib-
 cd LLM-code
 source .venv-1/bin/activate
 pip install -r requirements.txt
+
+
+## 💬 Example Execution Log
+
+Below is an actual execution trace of the agent handling a user query via function calling:
+
+```text
+User Question: "I just discovered the course. Can I still join it?"
+
+iteration #1...
+Calling tool: search_faq(query='course deadline join')
+Found 2 matching records in faq.db.
+
+iteration #2...
+No more tool calls required. Synthesizing final answer...
+
+Assistant Response:
+Yes, you can still join the course! Even if you register after the start date, 
+all materials, homeworks, and lecture recordings remain accessible. 
+Just make sure to submit the final project before the main deadline.
+```
